@@ -1,0 +1,2 @@
+(this["webpackJsonparlindd-use-fetch-example"]=this["webpackJsonparlindd-use-fetch-example"]||[]).push([[0],{10:function(e,n,t){"use strict";t.r(n);t(3);var c=t(0),r=t.n(c),u=t(1),s=function(){return"use-fetch"};t.n(u).a.render(r.a.createElement(s,null),document.getElementById("root"))},2:function(e,n,t){e.exports=t(10)},3:function(e,n,t){}},[[2,1,2]]]);
+//# sourceMappingURL=main.2b09fd54.chunk.js.map
