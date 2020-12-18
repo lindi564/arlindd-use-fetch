@@ -5,6 +5,14 @@
   "author": "arlindd",
   "license": "MIT",
   "repository": "lindi564/arlindd-use-fetch",
+  "keywords": [
+    "fetch",
+    "hooks",
+    "use-fetch",
+    "use-fetch-hook",
+    "all-fetches",
+    "all-fetch"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

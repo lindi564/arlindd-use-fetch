@@ -37,7 +37,7 @@ const App = () => {
   const submit = async () => {
     const body = JSON.stringify({title: title,price: price})
     const response = await fetchHook({url: `http://localhost:5000/products`,method: "POST",
-                                      headers: {'Content-Type': 'application/json',body: body}})
+                                      headers: {'Content-Type': 'application/json'},body: body})
     console.log(response)
   }
 
@@ -62,6 +62,41 @@ const App = () => {
   )
 }
 ```
+
+## Guide
+
+const [fetchHook, loading,error] = useFetch()
+
+**error** is set if an error was catched by the request.
+**loading** is true until the request is done.
+**fetchHook** will made requests to the server.
+
+await fetchHook({url,method,headers,body})
+
+**url** is the path of the request you want to do.
+
+**method** by default is GET,but you can change it whatever you want for example to POST,PUT,DELETE,PATCH
+
+**headers** you can put the headers you want for the request for example Authorization etc.
+
+**body** you can put body when you need to POST,PUT or PATCH
+
+## Example
+
+**GET** request
+> await fetchHook({url: "http://localhost:5000/products"})
+
+**DELETE** request
+> await fetchHook({url: `http://localhost:5000/products/${id}`,method: "DELETE"})
+
+**POST** request
+> await fetchHook({url: `http://localhost:5000/products`,method: "POST",headers: {'Content-Type': 'application/json'},body: body})
+
+**PUT** request
+> await fetchHook({url: `http://localhost:5000/products`,method: "PUT",headers: {'Content-Type': 'application/json'},body: body})
+
+**PATCH** request
+> await fetchHook({url: `http://localhost:5000/products`,method: "PATCH",headers: {'Content-Type': 'application/json'},body: body})
 
 ## License
 
